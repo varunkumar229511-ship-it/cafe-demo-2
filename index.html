@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fursat Ke Pal | Cafe</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+</head>
+<body>
+<div class="demo-bar">✨ Design Preview (concept demo): final content, photos aur details cafe ke approval ke baad add hongi</div>
+<div class="bg" id="bg"></div>
+
+<nav>
+  <div class="logo">Fursat Ke Pal<small>FURSAT KE PAL, COFFEE KE SAATH</small></div>
+  <button class="menu-btn" onclick="document.getElementById('links').classList.toggle('open')">☰</button>
+  <ul id="links">
+    <li><a href="#home" data-p="home">Home</a></li>
+    <li><a href="#menu" data-p="menu">Menu</a></li>
+    <li><a href="#about" data-p="about">About</a></li>
+    <li><a href="#gallery" data-p="gallery">Gallery</a></li>
+    <li><a href="#contact" data-p="contact">Contact</a></li>
+    <li><a href="#booking" data-p="booking">Booking</a></li>
+  </ul>
+  <a class="pill nav-cta" href="#booking">Table Book Karein</a>
+</nav>
+
+<!-- HOME -->
+<section class="page show" id="home">
+  <div class="hero">
+    <h1>Fursat<br>ke pal.</h1>
+    <div class="tag">Chai, coffee aur apno ka saath.</div>
+    <div class="cupwrap"><div id="bigcup"></div><div class="hint">⟳ DRAG KARO: ghumao, jhukao ya ulta kar do</div></div>
+    <div class="pick">
+      <small>Aaj ki pasand</small>
+      <h2 id="pName">Latte</h2>
+      <p id="pDesc">Smooth aur creamy espresso, steamed milk aur halke foam ke saath.</p>
+      <span class="pr">₹ --</span>
+    </div>
+    <div class="row" id="row"></div>
+    <a class="pill cta" href="#booking">🪑 Table Book Karein</a>
+  </div>
+
+  <div class="strip">
+    <div class="card tilt"><span class="ic">📍</span><h3>Address</h3><p><span class="ph">Cafe ka address</span></p></div>
+    <div class="card tilt"><span class="ic">🕒</span><h3>Timing</h3><p><span class="ph">Khulne ka samay</span></p></div>
+    <div class="card tilt"><span class="ic">📞</span><h3>Reservation</h3><p><span class="ph">Phone number</span></p></div>
+  </div>
+
+  <h2 class="title">Yahan kya <em>khaas</em> hai?</h2>
+  <p class="sub">Mouse ghumaiye, cards 3D me hilenge</p>
+  <div class="grid">
+    <div class="card tilt"><span class="ic">☕</span><h3>Coffee &amp; Chai</h3><p>Taaza bani, aapke mood ke hisaab se.</p></div>
+    <div class="card tilt"><span class="ic">🥐</span><h3>Snacks</h3><p>Bhookh lage to ek se badhkar ek options.</p></div>
+    <div class="card tilt"><span class="ic">🍰</span><h3>Desserts</h3><p>Meetha khaaye bina fursat adhuri hai.</p></div>
+    <div class="card tilt"><span class="ic">🛋️</span><h3>Cozy Vibes</h3><p>Aaram se baithiye, baatein kijiye, relax kijiye.</p></div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="page" id="menu">
+  <h2 class="title">Hamara <em>Menu</em></h2>
+  <p class="sub">Neeche ke items sample hain. Asli menu aur prices cafe se milne par update honge.</p>
+  <div class="tabs" id="tabs"></div>
+  <div class="grid" id="menuGrid"></div>
+  <p class="note">* Sample menu: final menu aur rates cafe provide karega.</p>
+</section>
+
+<!-- ABOUT -->
+<section class="page" id="about">
+  <h2 class="title">Hamari <em>Kahani</em></h2>
+  <p class="sub">Ek choti si jagah, badi si fursat.</p>
+  <div class="grid">
+    <div class="card tilt"><span class="ic">🤎</span><h3>Humari Soch</h3><p>Bhaag-daud bhari zindagi me ek aisi jagah dena jahan aap sukoon se kuch pal bita sakein.</p></div>
+    <div class="card tilt"><span class="ic">🌿</span><h3>Taazgi</h3><p>Acchi cheezein, taaza taiyaar, pyaar se parosi gayi.</p></div>
+    <div class="card tilt"><span class="ic">🤝</span><h3>Apnapan</h3><p>Yahan har mehmaan khaas hai, har pal yaadgaar.</p></div>
+  </div>
+  <p class="note"><span class="ph">Cafe ki asli story yahan add hogi</span></p>
+</section>
+
+<!-- GALLERY -->
+<section class="page" id="gallery">
+  <h2 class="title"><em>Gallery</em></h2>
+  <p class="sub">Photos jald aayengi. Abhi cards par hover karke dekhiye</p>
+  <div class="gal" id="gal"></div>
+</section>
+
+<!-- CONTACT -->
+<section class="page" id="contact">
+  <h2 class="title"><em>Contact</em></h2>
+  <p class="sub">Aaiye, milte hain!</p>
+  <div class="strip" style="margin-top:0">
+    <div class="card tilt"><span class="ic">📍</span><h3>Address</h3><p><span class="ph">Cafe ka address yahan</span></p></div>
+    <div class="card tilt"><span class="ic">📞</span><h3>Phone</h3><p><span class="ph">Cafe ka number yahan</span></p></div>
+    <div class="card tilt"><span class="ic">🕒</span><h3>Timing</h3><p><span class="ph">Khulne ka samay yahan</span></p></div>
+  </div>
+  <div class="formwrap">
+    <h3 style="font-size:30px">Humein message bhejein</h3>
+    <form onsubmit="return demo(event,'cmsg')">
+      <label>Naam</label><input required placeholder="Aapka naam">
+      <label>Email / Phone</label><input required placeholder="Kaise sampark karein?">
+      <label>Message</label><textarea rows="4" required placeholder="Kuch kehna hai?"></textarea>
+      <br><br><button class="pill" type="submit">Bhejein</button>
+      <div class="msg" id="cmsg">Ye demo form hai, message kahin bheja nahi gaya. Live website par ye cafe tak pahunchega. ✅</div>
+    </form>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="page" id="booking">
+  <h2 class="title">Table <em>Booking</em></h2>
+  <p class="sub">Apni jagah pehle se pakki karein.</p>
+  <div class="formwrap">
+    <form onsubmit="return demo(event,'bmsg')">
+      <div class="two">
+        <div><label>Naam</label><input required placeholder="Aapka naam"></div>
+        <div><label>Phone</label><input required type="tel" placeholder="Mobile number"></div>
+      </div>
+      <div class="two">
+        <div><label>Date</label><input required type="date"></div>
+        <div><label>Time</label><input required type="time"></div>
+      </div>
+      <div class="two">
+        <div><label>Kitne log?</label><select><option>1-2</option><option>3-4</option><option>5-6</option><option>7+</option></select></div>
+        <div><label>Occasion</label><select><option>Normal</option><option>Birthday</option><option>Date</option><option>Friends meetup</option></select></div>
+      </div>
+      <label>Koi khaas request?</label><textarea rows="3" placeholder="Optional"></textarea>
+      <br><br><button class="pill" type="submit">Booking Request</button>
+      <div class="msg" id="bmsg">Ye demo form hai, booking asli me save nahi hui. Live website par request cafe ko jayegi. ✅</div>
+    </form>
+  </div>
+</section>
+
+<footer>© Fursat Ke Pal | Design Preview Concept</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
